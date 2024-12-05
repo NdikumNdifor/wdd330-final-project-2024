@@ -13,6 +13,7 @@
 	height: 100px;
 	/* background-color: aqua; */
 	padding: 0 1rem;
+  border-bottom: 1px solid #000;
 }
 
  .search-box, #menu, .logo {
@@ -59,6 +60,63 @@
 	background-color: green;
 	color: #f2f2f2;
 	transform: scale(0.9);
+}
+
+/********* Styling for Hamburger menu ***********/
+#menu {
+	font-size: 1.8rem;
+	border:none;
+	/*border: 1px solid rgba(0,0,0,.3);*/
+	padding: 3px 7px 6px;
+	background-color: transparent;
+	color: #000;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "X";
+}
+
+.navigation {
+	position: fixed;
+	top: 100px;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	background-color: black;
+	color: #fff;
+	width: 50%;
+	padding: 0px;
+	transition: right 0.5s linear;
+}
+
+.navigation li {
+	display: none;
+}
+
+.navigation li a {
+	display: block;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+
+/* .navigation li a:hover {
+
+} */
+
+.open li {
+	display: block;
+	width: 100%;
+}
+
+.open li a {
+	display: block;
 }
 
 
