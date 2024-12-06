@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 
-#main-header {
+.header {
 	/* position: relative; */
 	display: flex;
 	align-items: center;
@@ -118,6 +118,61 @@
 .open li a {
 	display: block;
 }
+
+/********** Styling for Media Query ****************/
+@media(min-width:768px){
+	.navigation {
+		position: relative;
+		top: 0;
+		flex-direction: row;
+		justify-content: right;
+		background-color: aqua;
+	}
+
+	.navigation li {
+		display: block;
+		
+	}
+
+	#menu {
+		display: none;
+	}
+
+	.cart-icon {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		justify-items: center;
+	}
+
+	.cart-icon img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.logo, .search-box, .cart-icon {
+		margin-top: 0px;
+		flex: 1;
+		font-size: 1rem;
+	}
+
+	.search-box {
+		flex: 2;
+		height: 40px;
+	}
+
+	.search-box input {
+		height: 40px;
+	}
+
+	.search-box button {
+		height: 40px;
+		width: 40px;
+		top: 0;
+		right: 1px;
+	}	
+} 
 
 
 
