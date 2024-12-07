@@ -1,5 +1,5 @@
 import { renderListWithTemplate } from "./utils";
-import { ExternalServices } from "./externalServices.mjs";
+import { ExternalServices } from "./ExternalServices.mjs";
 
 // A template that displays an image and name of a movie
 function productTemplate(product){

@@ -1,5 +1,5 @@
 import { loadHeaderFooter, getElement } from "./utils";
-import { ExternalServices } from "./externalServices.mjs";
+import { ExternalServices } from "./ExternalServices.mjs";
 import { ProductListing } from "./ProductList.mjs";
 
 // Creating an instance of external service class to
