@@ -26,7 +26,6 @@ export class ExternalServices {
       const response = await fetch(BASE_URL + `movie/${id}?api_key= ${API_KEY}`);
       const data = await convertToJson(response);
       return data;
-
     }
 }
 

@@ -1,3 +1,5 @@
+/* eslint-env browser */
+
 // Selects an element on the DOM.
 export function getElement(selector){
    return document.querySelector(selector)
@@ -38,3 +40,14 @@ export async function  loadTemplate(path){
     template.innerHTML = html;
     return template
 }
+
+export function renderListWithTemplate(
+    templateFn, 
+    list, 
+    parentElement, 
+    position= "afterBegin", 
+    clear = false) {
+    if(clear) parentElement.innerHTML = "";
+    const htmlItems = list.map(templateFn);
+    parentElement.insertAdjacentHTML(position, htmlItems)
+};
