@@ -1,4 +1,4 @@
-
+import { setLocalStorage, getLocalStorage } from "./utils";
 // product details template structure 
 function productDetailsTemplate(product){
     const imageUrl = `https://image.tmdb.org/t/p/w342${product.poster_path}`;
@@ -18,6 +18,10 @@ function productDetailsTemplate(product){
                     <p id="description"><strong>Description:</p></strong>
                     <p class="top"><span class="text-details">${product.overview}</span></p>
                 </div>
+
+                <div class="add-movie">
+                    <button id="addToWatchList" data-id="${product.id}">Save To Watch List</button>
+                </div>
             </div>`
 }
 
@@ -36,7 +40,18 @@ export class ProductDetails {
 
         // Calls renderMovieDetails function to render the details of a movie
         await this.renderMovieDetails(this.product)
+
+        document
+                .getElementById("addToWatchList")
+                .addEventListener("click", this.addMovieToWatchList(this.product))
     }
+
+    addMovieToWatchList(product){
+        const movieList = getLocalStorage("so-movie") || [];
+        movieList.push(product);
+        setLocalStorage("so-movie", movieList);
+    }
+
 
     async renderMovieDetails(product){
         this.parentElement.insertAdjacentHTML("afterBegin", productDetailsTemplate(product))
