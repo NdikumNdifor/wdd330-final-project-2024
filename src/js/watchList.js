@@ -1,5 +1,4 @@
 import { loadHeaderFooter, getElement} from "./utils";
-import { ExternalServices} from "./ExternalServices.mjs";
 import { MovieWatchList} from "./MovieWatchList.mjs";
 
 // const dataSource = new ExternalServices()
