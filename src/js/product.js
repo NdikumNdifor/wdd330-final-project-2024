@@ -1,4 +1,4 @@
-import { getElement, loadHeaderFooter, getParams } from "./utils";
+import { getElement, loadHeaderFooter, getParams } from "./utils.mjs";
 import { ProductDetails } from "./ProductDetails.mjs";
 import { ExternalServices } from "./ExternalServices.mjs";
 

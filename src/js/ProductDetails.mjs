@@ -1,4 +1,4 @@
-import { setLocalStorage, getLocalStorage } from "./utils";
+import { setLocalStorage, getLocalStorage, getElement} from "./utils.mjs";
 // product details template structure 
 function productDetailsTemplate(product){
     const imageUrl = `https://image.tmdb.org/t/p/w342${product.poster_path}`;
@@ -56,4 +56,5 @@ export class ProductDetails {
     async renderMovieDetails(product){
         this.parentElement.insertAdjacentHTML("afterBegin", productDetailsTemplate(product))
     }
+
 }

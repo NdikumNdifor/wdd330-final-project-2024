@@ -1,6 +1,9 @@
 import { loadHeaderFooter, getElement } from "./utils";
 import { ExternalServices } from "./ExternalServices.mjs";
 import { ProductListing } from "./ProductList.mjs";
+import { LocalJsonData } from "./LocalData.mjs";
+import Alert from "./Alerts.mjs";
+
 
 // Creating an instance of external service class to
 // call the get movies method for movie data
@@ -14,12 +17,21 @@ const listElement = getElement(".product-listing");
 // in the defined template
 const products = new ProductListing(dataSource, listElement);
 
+
+const localDataSource = new LocalJsonData("announcement");
+const alertMessages = new Alert( localDataSource)
+
+
 async function main() {
   // Loads the header and footer
   await loadHeaderFooter();
 
   // Use object to call the init method that renders template
   await products.init();
+
+  await alertMessages.init();
+
+  
 }
 
 // calls the function called main

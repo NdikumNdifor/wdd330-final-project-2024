@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .header {
   /* position: relative; */
   display: flex;
@@ -229,13 +233,6 @@ footer {
     display: none;
   }
 
-  .cart-icon {
-    position: relative;
-    top: 0px;
-    left: 0px;
-    justify-items: center;
-  }
-
   .cart-icon img {
     display: block;
     margin-left: auto;
@@ -279,4 +276,61 @@ footer {
     border: none;
     border-bottom: 1px solid white;
   }
+
+  div.cart-icon {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    justify-items: center;
+  }
+
+  span.super-script {
+    position: absolute;
+    top: -4px;
+    right: 135px;
+  }
+  
 }
+
+.super-script {
+  background-color: orange;
+  color: #000;
+  position: absolute;
+  top: -4px;
+  right: 18px;
+  z-index: 2;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  font-size: 0.1.1rem;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+button#addToWatchList {
+  padding: 10px 20px;
+  margin-left:  16px;
+  background-color: whitesmoke;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 10px 18px;
+}
+
+div#product-img, li a img:hover {
+  transition: 0.5s;
+}
+
+div#product-img, li a img:hover {
+  transform: scale(0.8);
+}
+
+.alert-list {
+  background-color: black;
+  color:aliceblue;
+}
+
+
+
+
