@@ -1,4 +1,4 @@
-import { setLocalStorage, getLocalStorage, getElement} from "./utils.mjs";
+import { setLocalStorage, getLocalStorage} from "./utils.mjs";
 // product details template structure 
 function productDetailsTemplate(product){
     const imageUrl = `https://image.tmdb.org/t/p/w342${product.poster_path}`;
@@ -44,6 +44,7 @@ export class ProductDetails {
         document
                 .getElementById("addToWatchList")
                 .addEventListener("click", this.addMovieToWatchList(this.product))
+       
     }
 
     addMovieToWatchList(product){
