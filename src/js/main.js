@@ -3,6 +3,7 @@ import { ExternalServices } from "./ExternalServices.mjs";
 import { ProductListing } from "./ProductList.mjs";
 import { LocalJsonData } from "./localData.mjs";
 import Alert from "./Alerts.mjs";
+import { SuperScript } from "./SuperScript.mjs";
 
 
 // Creating an instance of external service class to
@@ -21,6 +22,8 @@ const products = new ProductListing(dataSource, listElement);
 const localDataSource = new LocalJsonData("announcement");
 const alertMessages = new Alert( localDataSource)
 
+const superscript = new SuperScript();
+
 
 async function main() {
   // Loads the header and footer
@@ -31,6 +34,7 @@ async function main() {
 
   await alertMessages.init();
 
+  superscript.init();
   
 }
 
