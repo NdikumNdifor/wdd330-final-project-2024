@@ -1,7 +1,7 @@
 import { loadHeaderFooter, getElement } from "./utils";
 import { ExternalServices } from "./ExternalServices.mjs";
 import { ProductListing } from "./ProductList.mjs";
-import { LocalJsonData } from "./LocalData.mjs";
+import { LocalJsonData } from "./localData.mjs";
 import Alert from "./Alerts.mjs";
 
 
