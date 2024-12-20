@@ -88,16 +88,20 @@ img {
 
 .navigation {
   position: fixed;
-  top: 100px;
+  top: 90px;
   left: 0;
   display: flex;
   flex-direction: column;
   list-style: none;
   background-color: black;
   color: #fff;
-  width: 50%;
+  width: 100%;
   padding: 0px;
-  transition: right 0.5s linear;
+  transition: right 2s linear;
+}
+
+.navigation.open {
+  height: 100Vh;
 }
 
 .navigation li {
@@ -295,6 +299,12 @@ footer {
     width: 55px;
     position: relative;
   }
+
+  /***** Mobile Menu ***********/
+
+  ul.navigation {
+    display: none;
+  }
   
 }
 
@@ -336,6 +346,13 @@ div#product-img, li a img:hover {
   background-color: black;
   color:aliceblue;
 }
+
+.centered-image {
+  display: block;
+  margin: 0 auto;
+}
+
+
 
 
 

@@ -2,9 +2,9 @@ import { setLocalStorage, getLocalStorage} from "./utils.mjs";
 // product details template structure 
 function productDetailsTemplate(product){
     const imageUrl = `https://image.tmdb.org/t/p/w342${product.poster_path}`;
-    return `<li>
+    return `<li class="li-img">
               <div id="product-img">
-                <img src="${imageUrl}" alt="${product.original_title}" ></img>
+                <img src="${imageUrl}" class="centered-image" alt="${product.original_title}" ></img>
               </div>
             </li>
             <div id= "detail-info">

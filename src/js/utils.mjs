@@ -1,5 +1,7 @@
 /* eslint-env browser */
 
+import { initializeHamburgerMenu } from "./HamburgerMenu.mjs";
+
 // Selects an element on the DOM.
 export function getElement(selector) {
   return document.querySelector(selector);
@@ -16,6 +18,8 @@ export async function loadHeaderFooter() {
   promises.push(renderWithTemplate(loadTemplate, header, headerPath));
   promises.push(renderWithTemplate(loadTemplate, footer, footerPath));
   await Promise.all(promises);
+
+  initializeHamburgerMenu();
 }
 
 // Make use of a template function and renders html.
